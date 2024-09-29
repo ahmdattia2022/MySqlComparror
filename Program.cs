@@ -15,11 +15,17 @@ public class DbConfig
     public string Charset { get; set; } = "utf8"; // Default charset
 }
 
+public class Config
+{
+    public DbConfig LocalConfig { get; set; }
+    public DbConfig RemoteConfig { get; set; }
+}
+
 class Program
 {
     static void Main()
     {
-        var config = LoadConfig("dbconfig.json");
+        var config = LoadConfig("../../../dbconfig.json"); // Adjust the path as needed
         if (config == null)
         {
             Console.WriteLine("Failed to load configuration.");
@@ -71,13 +77,13 @@ class Program
         return tables;
     }
 
-    static (DbConfig LocalConfig, DbConfig RemoteConfig)? LoadConfig(string filePath)
+    static Config? LoadConfig(string filePath)
     {
         try
         {
             var json = File.ReadAllText(filePath);
             var config = JsonConvert.DeserializeObject<Config>(json);
-            return (config.LocalConfig, config.RemoteConfig);
+            return config;
         }
         catch (Exception ex)
         {
@@ -85,10 +91,4 @@ class Program
             return null;
         }
     }
-}
-
-public class Config
-{
-    public DbConfig LocalConfig { get; set; }
-    public DbConfig RemoteConfig { get; set; }
 }
