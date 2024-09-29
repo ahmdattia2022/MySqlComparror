@@ -1,0 +1,20 @@
+{
+    "LocalConfig": {
+        "Host": "localhost",
+        "User": "your_local_user",
+        "Password": "your_local_password",
+        "Database": "your_local_database",
+        "Port": "3306",
+        "SslMode": "none",
+        "Charset": "utf8"
+    },
+    "RemoteConfig": {
+        "Host": "your_remote_host",
+        "User": "your_remote_user",
+        "Password": "your_remote_password",
+        "Database": "your_remote_database",
+        "Port": "3306",
+        "SslMode": "none",
+        "Charset": "utf8"
+    }
+}
