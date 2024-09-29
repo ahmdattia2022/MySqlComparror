@@ -1,8 +1,6 @@
 # Ignore binary files
 *.bin
 
-# Ignore node_modules directory
-node_modules/
 
 # Ignore log files
 *.log
@@ -38,3 +36,16 @@ coverage/
 
 # Ignore dependency directories
 vendor/
+
+# Ignore Visual Studio files
+.vs/
+
+# Ignore build output directories
+obj/
+
+# Other common ignores
+bin/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
