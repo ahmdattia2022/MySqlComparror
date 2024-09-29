@@ -1,0 +1,39 @@
+# Ignore binary files
+*.bin
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore build directories
+build/
+dist/
+
+# Ignore temporary files
+*.tmp
+*.swp
+
+# Ignore IDE specific files
+.vscode/
+.idea/
+
+# Ignore environment variable files
+.env
+.env.local
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore coverage reports
+coverage/
+*.lcov
+
+# Ignore dependency directories
+vendor/
